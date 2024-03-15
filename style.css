@@ -1,0 +1,47 @@
+body {
+    padding-bottom: 60px;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    position: relative;
+}
+
+.footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.about {
+    margin-bottom: 50px;
+}
+
+.carousel-item {
+    height: 80vh; 
+    width: 100%;
+    object-fit: cover;
+}
+h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
