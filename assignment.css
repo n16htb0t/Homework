@@ -32,10 +32,13 @@ nav li:last-child{
 .banner img{
     height: 500px;
     width: 100%;
-    background-size: cover;
+    /* background-size: cover; */
     background-position-x: bottom;
     background-position-y: center;
     background-repeat: no-repeat;
+    object-fit: cover;
+    
+
 }
 .content{
     display: flex;
@@ -74,9 +77,11 @@ nav li:last-child{
 }
 
 .content img{
+    height: 65vh;
     width: 100%;
     background-position: center center;
     background-repeat: no-repeat;
+    object-fit: cover;
 }
 .contact button{
     width: 150px;
