@@ -1,0 +1,154 @@
+
+@media all {
+  body {
+    font-size: 13px;
+    font-family: sans-serif;
+    color: black;
+  }
+}
+
+.card-socials {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  width: 80%;
+}
+.card-socials img {
+  width: 30px;
+  border-radius: 100%;
+}
+.card-job {
+  font-weight: 500;
+  letter-spacing: -1px;
+  font-family: Montserrat;
+}
+.card-name {
+  margin-top: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  font-family: Montserrat;
+}
+.team-section {
+  display: grid;
+  grid-template-columns: 3fr 1fr 3fr;
+  grid-row-gap: 20px;
+  justify-items: center;
+  
+
+  
+}
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 200px;
+  padding: 50px 30px;
+  border: 0.1em solid rgba(0, 0, 0, 0.1);
+  box-shadow: rgb(27, 27, 27) 0px 0px 5px;
+}
+.images {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+.flex {
+  display: flex;
+}
+.section-label {
+  font-size: 39px;
+}
+.text-center {
+  text-align: center;
+}
+.flex-col {
+  flex-direction: column;
+}
+.justify-center {
+  justify-content: center;
+}
+.items-center {
+  align-items: center;
+}
+.w-full {
+  width: 100%;
+}
+
+.servicing {
+  align-items: center;
+  background-color: #439bdf;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  padding: 20px;
+}
+.servicing img {
+  width: 60px;
+  filter: invert(1);
+  border: 2px solid black;
+  padding: 15px;
+}
+.servicing h4 {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 20px;
+}
+.servicing h3 {
+  font-size: 19px;
+}
+.services-section {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 6fr 6fr 6fr 6fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-items: center;
+  align-items: stretch;
+}
+.m-title {
+  font-size: 25px;
+  background-color: #65d3eb;
+  padding: 20px 70px;
+  color: white;
+}
+.m-list > li > img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  filter: grayscale(1);
+}
+.m-list h4 {
+  text-align: center;
+}
+.m-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.182);
+}
+.m-list li:last-of-type {
+  border-bottom: 0;
+}
+.m-list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+}
+.m-button {
+  padding: 15px 30px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background: black;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
+.membership {
+  margin: 0px 30px;
+}
