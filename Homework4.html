@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Homework javascript</title>
+</head>
+<body>
+   <h1>Homework 4</h1>
+    <h2>Task 1</h2>
+    <p>Write a function that takes two arguments, length and width, and returns the area of the rectangle. and check which one is greater : </p>
+    <h2>Task 2</h2>
+    <p>Write a function that takes two arguments, area1 and area2, and returns the mean of the two areas.</p>
+    <h2>Task 3</h2>
+    <p>Write a function that takes a number as an argument and returns whether the number is odd or even.</p>
+    <h2>Task 4</h2>
+    <p>Write a function that takes a number as an argument and returns whether the number is positive, negative, or zero.</p>
+    <script>
+        function areaOfRectangle(length, width){
+            return length * width;
+        }
+        
+        var area1 = areaOfRectangle(50, 30);
+        var area2 = areaOfRectangle(50, 20);
+        function meanOfRectangle(area1, area2){
+            return (area1 + area2) / 2;
+        }
+                var outputDiv = document.createElement("div");
+                outputDiv.id = "output";
+                document.body.appendChild(outputDiv);
+                var output = "Area of first rectangle: " + area1 + "<br>";
+                output += "Area of second rectangle: " + area2 + "<br>";
+                if(area1 > area2){
+                    output += "Area of first rectangle is greater than second rectangle";
+                }
+                else if(area1 < area2){
+                    output += "Area of second rectangle is greater than first rectangle";
+                }
+                else{
+                    output += "Area of both rectangles are equal";
+                }
+                output += "<br>Mean of both rectangles: " + meanOfRectangle(area1, area2);
+                document.getElementById("output").innerHTML = output;
+    </script>
+    <br><br>
+
+<input type="number" id="length1" placeholder="Enter number to find is it odd or even"><br><br>
+<input type="number" id="length2" placeholder="Enter number to its positive, Negative or zero"><br><br>
+<button onclick="oddeven()">Check odd or even</button>
+<button onclick="positiveNegativeZero(document.getElementById('length2').value)">Check positive, negative or zero</button>
+
+<script>
+function oddeven(){
+    var outputDiv2 = document.createElement("div");
+    outputDiv2.id = "output2";
+    document.body.appendChild(outputDiv2);
+    var length1 = document.getElementById("length1").value;
+    if(length1 % 2 == 0){
+        alert("Number is even");
+        document.getElementById("output2").innerHTML = "Number is even"; 
+    }
+    else{
+        alert("Number is odd");
+        document.getElementById("output2").innerHTML = "Number is odd";
+    }
+}
+
+function positiveNegativeZero(length2){
+    if(length2 > 0){
+        alert("Number is positive");
+        document.getElementById("output2").innerHTML = "Number is positive";
+    }
+    else if(length2 < 0){
+        alert("Number is negative");
+        document.getElementById("output2").innerHTML = "Number is negative";
+    }
+    else{
+        alert("Number is zero");
+        document.getElementById("output2").innerHTML = "Number is zero";
+    }
+}
+</script>
+
+</body>
+</html>
