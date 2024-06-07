@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 5</title>
+
+</head>
+<body>
+    <h2>Question 1</h2>
+    <p>
+        1)Develop a JavaScript program that calculates a student&#39;s letter grade based on their score. Use
+the following grading scale:
+You need two inputs(prompt). First for student and second score
+<ul>
+    <li>90-100: A</li>
+    <li>80-89: B</li>
+    <li>70-79: C</li>
+    <li>60-69: D</li>
+    <li>Below 60: F</li>
+</ul>
+</p>
+    <script>
+        var student = prompt("Enter student name: ");
+        var score = prompt("Enter student score: ");
+        var grade = "";
+        if(score >= 90 && score <= 100){
+            grade = "A";
+        }else if(score >= 80 && score <= 89){
+            grade = "B";
+        }else if(score >= 70 && score <= 79){
+            grade = "C";
+        }else if(score >= 60 && score <= 69){
+            grade = "D";
+        }else{
+            grade = "F";
+        }
+        document.write("Ans:"+"<br>Student: " + student + "<br>Score: " + score + "<br>Grade: " + grade);
+    </script>
+
+    <h2>
+        Question 2
+    </h2>
+    <p>
+    2)Develop a JavaScript program that takes two numbers as input and finds the larger one. If they are equal, display a message indicating that.
+    </p>
+    <script>
+        var num1 = prompt("Enter first number: ");
+        var num2 = prompt("Enter second number: ");
+        if(num1 > num2){
+            document.write("Ans: The larger number is: " + num1);
+        }else if(num2 > num1){
+            document.write("Ans: The larger number is: " + num2);
+        }else{
+            document.write(" Ans: The numbers are equal");
+        }
+    </script>
+
+</body>
+</html>
