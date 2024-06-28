@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Homework</title>
+    </head>
+
+
+    <body>
+<h2>1)
+Task: Create an array of integers. Write a program to calculate the sum of all elements in the array.>
+</h2>
+    <script>
+        let array = [1, 15, 23, 5, 6];
+        let sum = 0;
+        for (var i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+        document.write("Answer#1 : " + sum);
+    </script>
+<h2>2)Task: Create an array of integers. Write a program to find the maximum element in the array.,</h2>
+<script>
+    let array2 = [1, 15, 23, 5, 6];
+    let max = arra2y[0];
+    for (var i = 1; i < array2.length; i++) {
+        if (array2[i] > max) {
+            max = array2[i];
+        }
+    }
+    document.write("Answer#2 : " + max);
+</script>
+<h2>3)Task: Create an array of integers. Write a program to count how many elements are even and how many are odd.</h2>
+    <script>
+        let array3 = [1, 15, 23, 5, 6];
+        let even = 0;
+        let odd = 0;
+        for (var i = 0; i < array3.length; i++) {
+            if (array3[i] % 2 == 0) {
+                even++;
+            } else {
+                odd++;
+            }
+        }
+        document.write("Answer#3 : " + "Even: " + even + " Odd: " + odd);
+    </script>
+
+<h2>4) Write a program to count how many elements are positive and how many are negative.</h2>
+<script>
+    let array4 = [1, -15, 23, -5, 6];
+    let positive = 0;
+    let negative = 0;
+    for (var i = 0; i < array4.length; i++) {
+        if (array4[i] > 0) {
+            positive++;
+        } else {
+            negative++;
+        }
+    }
+    document.write("Answer#4 : " + "Positive: " + positive + " Negative: " + negative);
+</script>
+</body>
+
+</html>
+
+

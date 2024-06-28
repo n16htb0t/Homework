@@ -12,3 +12,5 @@ arr2.forEach((item,index,array)=>{
     sum+=item;
 });
 console.log(sum);
+
+
