@@ -1,9 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <title> Get Element By ID</title>
+    <title>querySelector</title>
 </head>
 <body>
+
+    <div id="book-list">
+        <li class="name">The Lean Startup</li>
+        <li class="name">Rework</li>
+        <li class="name">E-Myth</li>
+    </div>
     
+    <script>
+        // Correcting the selector for the second li element
+        const wmf = document.querySelector("#book-list li:nth-child(2)");
+        console.log(wmf);  // This should log the second li element
+
+        // Using querySelector to get the first element with the class name "name"
+        var book = document.querySelector('#book-list li.name');
+        console.log(book);  // This should log the first element with the class name "name"
+
+        // Using querySelectorAll to get all elements with the class name "name"
+        var books = document.querySelectorAll('#book-list li.name');
+        console.log(books);  // This should log a NodeList of all elements with the class name "name"
+
+        // Iterating through the NodeList and logging each book
+        Array.from(books).forEach(function(book){
+            console.log(book);  // This should log each element with the class name "name"
+        });     
+    </script>
+
 </body>
 </html>
