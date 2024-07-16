@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Deleting elements</title>
+</head>
+<body>
+    <div id="book-list">
+        <h2 id="page-banner">Book List</h2>
+        <ul>
+            <li class="name">The Lean Startup <button class="delete">delete</button></li>
+            <li class="name">Rework <button class="delete">delete</button></li>
+            <li class="name">E-Myth <button class="delete">delete</button></li>
+        </ul>
+    </div>
+    <form name="add-book">
+        <input type="text" name="book" id="book">
+        <input type="submit" value="Add book">
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add event listener to the delete buttons
+            const list = document.querySelector('#book-list ul');
+            list.addEventListener('click', function(e){
+                if(e.target.className === 'delete'){
+                    const li = e.target.parentElement;
+                    list.removeChild(li);
+                }
+            });
+
+            // Add a new book
+            var addForm = document.forms['add-book'];
+            addForm.addEventListener('submit', function(e){
+                e.preventDefault();
+                var value = addForm.querySelector('input[type="text"]').value;
+
+                // Create elements
+                const li = document.createElement('li');
+                const bookName = document.createElement('span');
+                const deleteBtn = document.createElement('button');
+
+                // Add text content
+                deleteBtn.textContent = 'delete';
+                bookName.textContent = value;
+
+                // Add classes
+                bookName.classList.add('name');
+                deleteBtn.classList.add('delete');
+
+                // Append to DOM
+                li.appendChild(bookName);
+                li.appendChild(deleteBtn);
+                list.appendChild(li);
+
+                // Clear the input
+                addForm.querySelector('input[type="text"]').value = '';
+            });
+        });
+    </script>
+</body>
+</html>

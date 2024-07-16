@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Change Events</title>
+</head>
+<body>
+    <form id="add-book-form">
+        <input type="checkbox" id="hide">
+        <label for="hide">Hide books</label>
+        <input type="text" id="book-input" placeholder="Add a new book">
+        <button type="submit">Add book</button>
+    </form>
+    <ul id="book-list">
+        <li class="name">The Lean Startup <button class="delete">delete</button></li>
+        <li class="name">Rework <button class="delete">delete</button></li>
+        <li class="name">E-Myth <button class="delete">delete</button></li>
+    </ul>
+
+    <script>
+        const hideBox = document.querySelector('#hide');
+        const bookList = document.querySelector('#book-list');
+        const addBookForm = document.querySelector('#add-book-form');
+        const bookInput = document.querySelector('#book-input');
+
+        hideBox.addEventListener('change', function(e){
+            if(hideBox.checked){
+                bookList.style.display = 'none';
+            } else {
+                bookList.style.display = 'initial';
+            }
+        });
+
+        addBookForm.addEventListener('submit', function(e){
+            e.preventDefault();
+            const bookName = bookInput.value.trim();
+            if (bookName) {
+                const li = document.createElement('li');
+                li.className = 'name';
+                li.innerHTML = `${bookName} <button class="delete">delete</button>`;
+                bookList.appendChild(li);
+                bookInput.value = '';
+            }
+        });
+
+        bookList.addEventListener('click', function(e){
+            if(e.target.className === 'delete'){
+                const li = e.target.parentElement;
+                bookList.removeChild(li);
+            }
+        });
+    </script>
+    
+</body>
+</html>
