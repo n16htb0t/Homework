@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Prep</title>
+</head>
+<body>
+    <div id="result">
+    </div>
+    <button id="btn">Click me</button>
+    <script>
+        let result = document.getElementById("result");
+        let btn = document.getElementById("btn");
+        btn.addEventListener("click", () => {
+            let heading = document.createElement("h2");
+            heading.setAttribute("id", "heading1");
+            heading.innerHTML = "1) Task: Create an array of integers. Write a program to calculate the sum of all elements in the array.";
+            result.appendChild(heading);
+
+            let array = [1, 15, 23, 5, 11];
+            let sum = 0;
+            for (let i = 0; i < array.length; i++) {
+                sum += array[i];
+            }
+
+            let answer1 = document.createElement("p");
+            answer1.innerHTML = "Answer#1 : " + sum;
+            result.appendChild(answer1);
+        });
+    </script>
+
+    <div id="work">
+        <h2 id="ok">to hide and show elements</h2>
+    </div>
+    <button id="btn2">Click me</button>
+    <script>
+        let work = document.getElementById("work");
+        let btn2 = document.getElementById("btn2");
+        btn2.addEventListener("click", () => {
+            if (work.classList.contains("deactivate")) {
+                work.classList.remove("deactivate");
+                btn2.textContent = "hide";
+            } else {
+                work.classList.add("deactivate");
+                btn2.textContent = "show";
+            }
+        });
+    </script>
+
+    <div id="result2">
+        <button id="btn3">Click me</button>
+    </div>
+    <script>
+        let result2 = document.getElementById("result2");
+        let btn3 = document.getElementById("btn3");
+        btn3.addEventListener("click", () => {
+            let heading = document.createElement("h2");
+            heading.setAttribute("id", "heading2");
+            heading.innerHTML = "2) Task: Create an array of integers. Write a program to find the maximum element in the array.";
+            result2.appendChild(heading);
+
+            let array2 = [1, 15, 23, 12, 6,29];
+            let max = array2[0];
+            for (let i = 1; i < array2.length; i++) {
+                if (array2[i] > max) {
+                    max = array2[i];
+                }
+            }
+
+            let answer2 = document.createElement("p");
+            answer2.innerHTML = "Answer#2 : " + max;
+            result2.appendChild(answer2);
+        });
+    </script>
+
+    <div id="result4"><h3>
+        hide and show text when button is clicked</h3>
+
+        <button id="btn4">Click me</button>
+    </div>
+<script>
+    let result4 = document.getElementById("result4");
+    let btn4 = document.getElementById("btn4");
+    btn4.addEventListener("click", () => {
+        if (result4.classList.contains("deactivate")) {
+            result4.classList.remove("deactivate");
+            btn4.textContent = "hide";
+            result4.innerHTML = "ADDING TEXT TO THE DIV ELEMENT";
+        } else {
+            result4.classList.add("deactivate");
+            btn4.textContent = "show";
+          
+        }
+        result4.style.display = "block";
+        result4.classList.add("active");
+        result4.classList.remove("active");
+        result4.classList.toggle("active");
+    });
+</script>
+</body>
+</html>
