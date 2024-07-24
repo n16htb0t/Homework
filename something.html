@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show and Hide Images</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #buttonWrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #showButton {
+            margin-left: 50%;
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+        #hideButton {
+            margin: 10px;
+            padding: 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #imageWrapper {
+            display: none;
+        }
+        #imageWrapper img {
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+        }
+        #hiddenHeader {
+            display: none;
+            text-align: center;
+        }
+        #imageContainer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .member {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="buttonWrapper">
+        <button id="hideButton">Hide</button>
+        <button id="showButton">Show</button>
+    </div>
+    
+    <div id="imageWrapper">
+        <div id="imageContainer">
+            <div class="member">
+                <img src="https://scsa.ge/wp-content/uploads/2022/01/maksim-iavich.jpg" alt="member1" style="width: 150px; height:150px; margin: 10px;">
+                <h3>John Doe</h3>
+                <h4>CEO</h4>
+            </div>
+            <div class="member">
+                <img src="https://scsa.ge/wp-content/uploads/2022/01/maksim-iavich.jpg" alt="member1" style="width: 150px; height:150px; margin: 10px;">
+                <h3>Jane Doe</h3>
+                <h4>CTO</h4>
+            </div>
+            <div class="member">
+                <img src="https://scsa.ge/wp-content/uploads/2022/01/maksim-iavich.jpg" alt="member1" style="width: 150px; height:150px; margin: 10px;">
+                <h3>Maksim Lavich</h3>
+                <h4>Cofounder</h4> 
+            </div>
+        </div>
+    </div>
+    <h1 id="hiddenHeader">Hidden elements</h1>
+
+    <script>
+        const showButton = document.getElementById('showButton');
+        const hideButton = document.getElementById('hideButton');
+        const imageWrapper = document.getElementById('imageWrapper');
+        const hiddenHeader = document.getElementById('hiddenHeader');
+
+        showButton.addEventListener('click', () => {
+            hiddenHeader.style.display = 'none';
+            imageWrapper.style.display = 'block';
+            showButton.style.backgroundColor = 'red';
+            showButton.style.color = 'white';
+            
+        });
+
+        hideButton.addEventListener('click', () => {
+            imageWrapper.style.display = 'none';
+            hiddenHeader.style.display = 'block';
+            hideButton.style.backgroundColor = 'green';
+            hideButton.style.color = 'white';
+        });
+    </script>
+
+<a href="https://github.com/n16htbot/Homework/something.html">https://github.com/n16htbot/Homework/something.html</a>
+</body>
+</html>
