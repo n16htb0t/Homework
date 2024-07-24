@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic List</title>
+</head>
+<body>
+  <script>
+let arr = ["javaScript", 2, "python", 5, "php", 6, "java"];
+let stringElements = arr.filter(item => typeof item === 'string');
+let ul = document.createElement('ul');
+
+stringElements.forEach(item => {
+  let li = document.createElement('li');
+  li.textContent = item;
+  ul.appendChild(li);
+});
+
+document.body.appendChild(ul);
+</script>
+</body>
+</html>
